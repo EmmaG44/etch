@@ -15,11 +15,22 @@ window.onload = () => {
 
 const boxes = document.querySelector('#boxes');
 
-for (i = 0; i < 4; i++) {
-    let square = document.createElement('div');
-    square.classList.add('square');
-    //square.setAttribute('draggable', 'false');
-    square.style.color = 'blue';
-    boxes.appendChild(square);
-    //console.log("h");
+
+//incorrect-supposedto be all square divs
+for (i = 0; i < 16; i++) {
+    let row = document.createElement('div');
+        row.classList.add('row');
+        row.style.color = 'blue';
+        boxes.appendChild(row);
+    for (j = 0; j < 16; j++) {
+        let square = document.createElement('div');
+        square.classList.add('square');
+        //square.setAttribute('draggable', 'false');
+        square.style.color = 'blue';
+        row.appendChild(square);
+        //console.log("h");
+    }
+    
+
+    
 };
